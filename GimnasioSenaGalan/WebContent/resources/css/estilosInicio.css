@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+/*Caracteristicas de las imagenes pequeñas*/
+.CaracteristicasImagenesPequenas{
+	margin-left: 5%;
+	text-align: left;
+	color: #000000;
+	font-size: 26px;
+}
+
+.imagenesPequenas{
+	height: 350px;
+	padding: 40px;
+	width: 40%;
+}
+
+/*Texto centrado en las ventanas modales*/
+.textoCentradoEnModales{
+	text-align: center;
+}
+
+
+.modal{
+	height: 100px;
+}

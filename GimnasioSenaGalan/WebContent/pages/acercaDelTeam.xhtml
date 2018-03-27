@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<ui:composition lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/plantilla.xhtml">
+	<head>
+
+<link rel="shortcut icon" href="resources/img1/favicon-16x16.png"
+	type="image/x-icon" />
+
+
+<!-- Vinculación de el Framework Materialize-->
+<link type="text/css" rel="stylesheet"
+	href="../resources/css/materialize.min.css" media="screen,projection" />
+
+<!-- Vinculación de estilos propios -->
+<link rel="stylesheet" href="../resources/css/estilosAcercaDe.css" />
+
+<!-- Vinculacion de los Iconos FontAwesome -->
+
+<link rel="stylesheet" href="../resources/css/fontello.css"></link>
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<!-- Nombramos nuestro nombre de Pagina -->
+	<ui:param name="tituloPagina" value="Acerca De" />
+
+	<body>
+
+		<!--  Creación de la Barra de Navegación que esta en el Template -->
+		<ui:param name="nombreInicio" value="Inicio" />
+		<ui:param name="nombreIngresoGimnasio" value="Ingreso al Gimnasio" />
+		<ui:param name="nombreRegistrarRutina" value="Agregar Rutina" />
+		<ui:param name="nombreRegistrarEjercicio" value="Agregar Ejercicio" />
+		<ui:param name="nombreRegistrarUsuario" value="Registrar Usuarios" />
+		<ui:param name="nombreAcercaDe" value="Acerca De" />
+		<ui:param name="nombreCerrarSesion" value="Cerrar Sesión" />
+
+
+		<ui:define name="contenido">
+			<!-- Creación del Titulo Desarrolladores de la Web -->
+			<h3 class="green-text text-darken-5 center-align">Desarrolladores
+				Gim Sena</h3>
+			<br />
+			<br />
+
+			<!-- Creación de la imagen Grande donde esta todo el equipo de trabajo -->
+			<div class="row">
+				<div class="col s12 m12 l12">
+					<div class="col l2"></div>
+					<div class="col l8">
+						<img src="../resources/img1/imagenGrupal.jpg" />
+					</div>
+					<div class="col l2"></div>
+				</div>
+			</div>
+
+			<!-- Creación de la imagen Desarrollador -->
+			<div class="row">
+				<div class="col l12">
+					<div class="col l2"></div>
+					<div class="col l8">
+						<div class="promo">
+							<img src="../resources/img1/imagenVictor.jpg"
+								class=" responsive-img circle col"
+								style="height: 230px; width: 30%;" />
+							<h5 class="green-text text-darken-5">Victor Manuel García
+								Hurtado</h5>
+							<h6 class="green-text text-darken-5">Alvin is an Information
+								Systems and Human Computer Interaction Major. He worked as a
+								Software Engineer at Fidelity Investments this past summer.</h6>
+						</div>
+					</div>
+					<div class="col l2"></div>
+				</div>
+
+				<!-- Creación de la imagen Desarrollador -->
+				<div class="col l12">
+					<div class="col l2"></div>
+					<div class="col l8">
+						<div class="promo">
+							<img src="../resources/img1/imagenAndres.jpg"
+								class=" responsive-img circle col"
+								style="height: 230px; width: 30%;" />
+							<h5 class="green-text text-darken-5">Andres Felipe Gonzalez
+								Gomez</h5>
+							<h6 class="green-text text-darken-5">Alvin is an Information
+								Systems and Human Computer Interaction Major. He worked as a
+								Software Engineer at Fidelity Investments this past summer.</h6>
+						</div>
+					</div>
+					<div class="col l2"></div>
+				</div>
+
+				<!-- Creación de la imagen Desarrollador -->
+				<div class="col l12">
+					<div class="col l2"></div>
+					<div class="col l8">
+						<div class="promo">
+							<img src="../resources/img1/imagenSebastian.jpg"
+								class=" responsive-img circle col"
+								style="height: 230px; width: 30%;" />
+							<h5 class="green-text text-darken-5">Sebastian Gamez
+								Hincapie</h5>
+							<h6 class="green-text text-darken-5">Alvin is an Information
+								Systems and Human Computer Interaction Major. He worked as a
+								Software Engineer at Fidelity Investments this past summer.</h6>
+						</div>
+					</div>
+					<div class="col l2"></div>
+				</div>
+
+				<!-- Creación de la imagen Desarrollador -->
+				<div class="col l12">
+					<div class="col l2"></div>
+					<div class="col l8">
+						<div class="promo">
+							<img src="../resources/img1/imagenSergio.jpg"
+								class=" responsive-img circle col"
+								style="height: 230px; width: 30%;" />
+							<h5 class="green-text text-darken-5">Sergio Andres Lozada
+								Perea</h5>
+							<h6 class="green-text text-darken-5">Alvin is an Information
+								Systems and Human Computer Interaction Major. He worked as a
+								Software Engineer at Fidelity Investments this past summer.</h6>
+						</div>
+					</div>
+					<div class="col l2"></div>
+				</div>
+
+				<!-- Creación de la imagen Desarrollador -->
+				<div class="col l12">
+					<div class="col l2"></div>
+					<div class="col l8">
+						<div class="promo">
+							<img src="../resources/img1/imagenGianka.jpg"
+								class=" responsive-img circle col"
+								style="height: 230px; width: 30%;" />
+							<h5 class="green-text text-darken-5">Gian Carlos Martínez
+								Quintero</h5>
+							<h6 class="green-text text-darken-5">Alvin is an Information
+								Systems and Human Computer Interaction Major. He worked as a
+								Software Engineer at Fidelity Investments this past summer.</h6>
+						</div>
+					</div>
+					<div class="col l2"></div>
+				</div>
+			</div>
+
+			<script type="text/javascript" src="../resources/js/jquery.js"></script>
+			<script type="text/javascript" src="../resources/js/materialize.min.js"></script>
+		</ui:define>
+	</body>
+</ui:composition>

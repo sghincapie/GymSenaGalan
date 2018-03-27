@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="shortcut icon" href="resources/img1/favicon-16x16.png"
+	type="image/x-icon" />
+
+<link rel="stylesheet" href="resources/css/materialize.css"></link>
+<link rel="stylesheet" href="resources/css/estilosInicio.css"></link>
+<link rel="stylesheet" href="resources/css/font-awesome.css"></link>
+<title>Gimnasio Sena</title>
+
+
+</head>
+<body>
+	<nav>
+		<h:form>
+			<div class="nav-wrapper green">
+				<a href="index.jsf" class="brand-logo left">GimSena</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+
+					<li><h:commandLink>
+							<a href="pages/login.jsf" class="fa fa-user"> Iniciar
+								Sesión</a>
+						</h:commandLink></li>
+
+
+				</ul>
+
+			</div>
+		</h:form>
+	</nav>
+
+	<!-- Imagenes en rotación -->
+	<br></br>
+	<div class="row">
+		<div class="col l1"></div>
+		<div class="col l10 s12 m12">
+			<div class="slider">
+				<ul class="slides">
+					<li><img src="resources/img1/imagen1.jpg" /></li>
+					<li><img src="resources/img1/imagen2.jpg" /></li>
+					<li><img src="resources/img1/imagen3.jpg" /></li>
+					<li><img src="resources/img1/imagen4.jpg" /></li>
+					<li><img src="resources/img1/imagen5.jpg" /></li>
+					<li><img src="resources/img1/imagen6.jpg" /></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col l1"></div>
+	</div>
+
+	<!-- Salto de imagen principal a las imagenes pequeñas -->
+	<br></br>
+
+	<!-- Creación de las targetas (Historia Sena, Dirigido A, Lugar)  -->
+
+	<!-- Targeta de La Historia del Sena -->
+	<div class="row">
+		<div class="col l4 s12 m6" style="height: 100px;">
+			<div class="card targetaLogoSena">
+				<div class="card-image">
+					<img src="resources/img1/logoSena.png" class="imagenesPequenas"
+						style="width: 95%; height: 300px; padding: 30px;" />
+					<h4 class="CaracteristicasImagenesPequenas">Historia Sena</h4>
+				</div>
+				<div class="card-content">
+					<p>El 21 de junio de 1957 nació el Servicio Nacional de
+						Aprendizaje (SENA) bajo el Decreto Ley 118 de ese año; fue una
+						iniciativa del economista cartagenero Rodolfo Martínez Tono
+						(q.e.p.d.), quien le propuso la idea de crear una entidad de
+						enseñanza laboral y técnica al entonces ministro del trabajo,
+						Raimundo Emiliani Román....</p>
+				</div>
+				<div class="card-action">
+					<!-- Modal Trigger -->
+					<a class="modal-trigger" href="#modal1">Ver Mas</a>
+
+					<!-- Modal Structure -->
+					<div id="modal1" class="modal">
+						<div class="modal-content">
+							<h4 class="textoCentradoEnModales">Historia del Sena</h4>
+							<p>
+								El 21 de junio de 1957 nació el Servicio Nacional de Aprendizaje
+								(SENA) bajo el Decreto Ley 118 de ese año; fue una iniciativa
+								del economista cartagenero Rodolfo Martínez Tono (q.e.p.d.),
+								quien le propuso la idea de crear una entidad de enseñanza
+								laboral y técnica al entonces ministro del trabajo, Raimundo
+								Emiliani Román. Entre los acontecimientos más destacados de
+								estos 59 años de historia se tiene la creación en el mismo año
+								de fundación de la Entidad de la primeras seccionales (hoy
+								regionales) de los departamentos de Antioquia, Atlántico,
+								Bolívar, Cauca, Cundinamarca, Magdalena, Nariño y Valle. En
+								1960, en solo tres años de fundación, la Institución ya contaba
+								con 30 centros de formación en todo el territorio nacional, que
+								llegaron a 50 en 1968. Al cumplir 15 años (1971), el SENA
+								alcanzó un prestigio internacional sin precedentes, ya que
+								distintos países llegaron a Colombia para conocer la experiencia
+								de sus procesos de formación y apoyo al emprendimiento. Se
+								destacó la visita de Charles de Gaulle, presidente de Francia.
+								Entre 1976 y 1980 se fortalecieron los procesos de formación
+								para la industria manufacturera, la agricultura industrial, el
+								comercio y los servicios, acorde con el crecimiento sostenido en
+								estos sectores de la economía. En 1985 surgió Capacitación para
+								la Participación Campesina (Capaca), dirigida a líderes
+								campesinos e indígenas y comunidades beneficiarias de la Reforma
+								Agraria para que tomen parte en el desarrollo rural. Cinco años
+								más tarde (1990) fue creada la Agencia Pública de Empleo –hasta
+								hoy el principal servicio de intermediación laboral en
+								Colombia–, a través de la cual 1,1 millones de personas han
+								conseguido trabajo en todo el país, 56 por ciento de ellas en
+								los últimos dos años. A partir de 1992 estudiantes de colegio
+								comenzaron a formarse simultáneamente como técnicos del SENA a
+								través del Programa de Articulación con la Media, mientras que
+								en 1996 la Entidad y el Instituto para el Desarrollo de la
+								Ciencia y la Tecnología (Colciencias) se unieron para promover
+								la investigación tecnología y la modernización científica.<br></br>
+								<a href="http://www.sena.edu.co">Fuente online</a>
+							</p>
+						</div>
+						<div class="modal-footer">
+							<a href="#!" class="modal-close btn-flat">Volver al Inicio</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Targeta de Dirigido A -->
+		<div class="col l4 s12 m6">
+			<div class="card targetaLogoSena">
+				<div class="card-image">
+					<img src="resources/img1/dirigidoA.png" class="imagenesPequenas"
+						style="width: 95%; height: 300px; padding: 30px;" />
+					<h4 class="CaracteristicasImagenesPequenas">Dirigido A</h4>
+				</div>
+				<div class="card-content">
+					<p>En nuestro Gimnasio del Centro de Fomarmación "Centro de
+						Comercio y Turismo Te brinda las mejores funcionalidades para que
+						los usuarios pero en este caso los Aprendices del Centro de
+						Formación o Funcionarios, Adionalmente contarán con una Aplicación
+						Móviles donde pueden visualizar diferentes actividades como ...</p>
+					<div class="card-action">
+						<!-- Modal Trigger -->
+						<a class="modal-trigger" href="#modal2">Ver Mas</a>
+
+						<!-- Modal Structure -->
+						<div id="modal2" class="modal">
+							<div class="modal-content">
+								<h4 class="textoCentradoEnModales">Dirigido A</h4>
+								<p>
+									En nuestro Gimnasio del Centro de Fomarmación "Centro de
+									Comercio y Turismo Te brinda las mejores funcionalidades para
+									que los usuarios pero en este caso los Aprendices del Centro de
+									Formación o Funcionarios, Adionalmente contarán con una
+									Aplicación Móviles donde pueden visualizar diferentes
+									actividades como: <br /> <br /> - Guía de Ejercicio: El
+									Usuario puede ver diferentes ejercicios con sus respectivas
+									rutinas, además cada ejercicio tendra su respectiva información
+									como: (Nombre del Ejercicio, Series, Repeticiones y Descripción
+									de ello)."<br /> <br /> - Rutinas Asignadas: El Administrador
+									por medio de la Aplicación Web, puede crear ejercicios y
+									rutinas además podrá agregar ejercicio a todos los usuarios que
+									estén Registrados en la Base de Datos. En la Aplicación Móvil
+									el Usuarios puede consultar mi Rutina Asignada, y alli estaran
+									las Rutinas que el Administrador le ha Asignada, y tendrán la
+									misma funcionalidad de Guía de Ejercicio. <br /> <br />-Mi
+									Perfil: El Usuario o Admistrador pueden editar su respectivo
+									Perfil. <br /> <br />- Horario: El Usuario puede consultar el
+									Horario que se maneja en el Gimnasio de Centro de Formación. <br />
+									<br />- Acerca De: El Usuario puede consultar el Acerca De,
+									donde se puede visualizar alguna información del Centro de
+									Formación y ademas de que equipo de Desarrolladores trabajo en
+									el Desarrollo de la Aplicación Móvil.
+								</p>
+							</div>
+							<div class="modal-footer">
+								<a href="#!" class="modal-close btn-flat">Volver al Inicio</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Targeta de LugarSena -->
+		<div class="col l4 s12 m6">
+			<div class="card targetaLogoSena">
+				<div class="card-image">
+					<img src="resources/img1/lugarSena.jpg" class="imagenesPequenas"
+						style="width: 95%; height: 300px; padding: 30px;" />
+					<h4 class="CaracteristicasImagenesPequenas">Lugar Sena</h4>
+				</div>
+				<div class="card-content">
+					<p>
+						El Sena Centro de Comercio y Turismo de Armenia se encuentra
+						Úbicado.<br /> <br /> - Departarmento del Quíndio - Ciudad de
+						Armenia. <br /> <br /> <br />
+					</p>
+				</div>
+				<div class="card-action">
+					<!-- Modal Trigger -->
+					<a class="modal-trigger" href="#modal3">Ver Mas</a>
+
+					<!-- Modal Structure -->
+					<div id="modal3" class="modal">
+						<div class="modal-content">
+							<h4 class="textoCentradoEnModales">Lugar Sena</h4>
+							<p></p>
+						</div>
+						<div class="modal-footer">
+							<a href="#!" class="modal-close btn-flat">Volver al Inicio</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="page-footer green">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s6 m6">
+					<h5 class="white-text">Gimnasion Sena</h5>
+					<p class="grey-text text-lighten-4">Realizar una propuesta para
+						el mejoramiento del gimnasio del Sena Galán e implementar un
+						sistema para que los aprendices e instructores tengan más
+						facilidad o acceso al gimnasio con un orden respectivo, y así
+						disminuir el tiempo de espera de los aprendices y de los
+						instructores encargados, y lograr una solución a este problema.</p>
+				</div>
+				<div class="col l4 offset-l2 s6 m6">
+					<h5 class="white-text">CONTÁCTANOS</h5>
+					<ul>
+						<li><a class="fa fa-envelope grey-text text-lighten-3"
+							href="#!"> cagerrero4@misena.edu.co</a></li>
+						<li><a class="fa fa-phone-square grey-text text-lighten-3"
+							href="#!"> +57 (6) 7461417 IP 62664</a></li>
+						<li><a
+							class="fa fa-facebook-official grey-text text-lighten-3"
+							href="#!"> SENAComunica</a></li>
+						<li><a class="fa fa-twitter-square grey-text text-lighten-3"
+							href="#!"> @SENAComunica</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2018 CopyDerechosReservados <a
+					class="grey-text text-lighten-4 right" href="#!">Sena Centro de
+					Comercio Turismo</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Creación del Píe de Pagina -->
+
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="resources/js/jquery.js"></script>
+	<script type="text/javascript" src="resources/js/materialize.min.js"></script>
+
+
+	<!-- jQuery Inicialización para las imagenes principales del Sena -->
+	<script>
+      			$(document).ready(function(){
+          			$('.slider').slider();
+        		});
+      		</script>
+
+	<!-- JQuery Inicialización para las ventanas Modales -->
+	<script>
+      			$(document).ready(function(){
+    	    	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    	   	 		$('.modal').modal();
+    	  		});
+      		</script>
+</body>
+</html>

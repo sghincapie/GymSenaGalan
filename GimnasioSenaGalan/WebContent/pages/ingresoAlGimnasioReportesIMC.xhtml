@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<ui:composition lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/gestionDeIngresoAlGimnasio.xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+	<head>
+<link rel="shortcut icon" href="../resources/img1/favicon-16x16.png"
+	type="image/x-icon" />
+
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet"
+	href="../resources/css/materialize.min.css" media="screen,projection" />
+
+
+<!-- Vinculación de la hoja de estilo de los iconos FontAwesome -->
+<link rel="stylesheet" href="../resources/css/font-awesome.css" />
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<ui:param name="tituloPagina" value="Reportes por Dia" />
+	<body>
+
+		<!-- Creacion de la Barra de Navegacion -->
+		<ui:param name="nombreInicio" value="Inicio" />
+		<ui:param name="nombreIngresoGimnasio" value="Ingreso al Gimnasio" />
+		<ui:param name="nombreRegistrarRutina" value="Agregar Rutina" />
+		<ui:param name="nombreRegistrarEjercicio" value="Agregar Ejercicio" />
+		<ui:param name="nombreRegistrarUsuario" value="Registrar Usuarios" />
+		<ui:param name="nombreAcercaDe" value="Acerca De" />
+		<ui:param name="nombreCerrarSesion" value="Cerrar Sesión" />
+
+		<ui:define name="tabGestionReportes">
+
+			<div class="row">
+				<div class="col l12">
+					<div class="col l2 s2 m2"></div>
+					<div class="col l8 s8 m8 green"
+						style="text-align: center; margin-bottom: 20px;">
+						<h5 style="color: #FFF;">Consulta por IMC</h5>
+					</div>
+					<div class="col l2 s2 m2"></div>
+					<div class="col l4"></div>
+					<div class="col l4">
+						<div class="input-field" style="width: 100%;">
+							<input id="fichaDeFormacion" type="number" class="validate" /><label
+								for="fichaDeFormacion">Número de documento</label>
+						</div>
+					</div>
+					<div class="col l4"></div>
+					<div class="col l12" style="text-align: center;">
+						<button class="waves-light btn green"><i class="fa fa-search" aria-hidden="true"></i> Buscar Informe</button>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Aqui va ir una tabla con todos los usuairos ingresados en el dia que el pida -->
+
+
+			<script type="text/javascript" src="../resources/js/jquery.js"></script>
+			<script type="text/javascript"
+				src="../resources/js/materialize.min.js"></script>
+
+			<!--Import jQuery before materialize.js-->
+			<script>
+			 $('.datepicker').pickadate({
+				    selectMonths: true, // Creates a dropdown to control month
+				    selectYears: 15, // Creates a dropdown of 15 years to control year,
+				    today: 'Today',
+				    clear: 'Clear',
+				    close: 'Ok',
+				    closeOnSelect: false // Close upon selecting a date,
+				  });
+				      
+			</script>
+		</ui:define>
+
+	</body>
+</ui:composition>

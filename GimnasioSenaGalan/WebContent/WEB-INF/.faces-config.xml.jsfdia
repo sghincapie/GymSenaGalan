@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#inicio.xhtml" PATH="/inicio.xhtml"
+  SHAPE="96,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#inicio.xhtml:0" NAME="item"
+   PATH="/inicio.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="ingresoAlGimnasio::#ingresoAlGimnasio.xhtml"
+    NAME="output" PATH="/ingresoAlGimnasio.xhtml"
+    TARGET="rules:#ingresoAlGimnasio.xhtml" TITLE="ingresoAlGimnasio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistrarRutina::#RegistrarRutina1.xhtml"
+    NAME="output1" PATH="/RegistrarRutina1.xhtml"
+    TARGET="rules:#RegistrarRutina1.xhtml" TITLE="RegistrarRutina" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="RegistrarEjercicio::#RegistroEjercicio1.xhtml" NAME="output2"
+    PATH="/RegistroEjercicio1.xhtml"
+    TARGET="rules:#RegistroEjercicio1.xhtml" TITLE="RegistrarEjercicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistroUsuarios::#RegistroUsuarios1.xhtml"
+    NAME="output3" PATH="/RegistroUsuarios1.xhtml"
+    TARGET="rules:#RegistroUsuarios1.xhtml" TITLE="RegistroUsuarios" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="AcercaDe::#AcercaDe.xhtml" NAME="output4"
+    PATH="/AcercaDe.xhtml" TARGET="rules:#AcercaDe.xhtml"
+    TITLE="AcercaDe" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="inicio::#inicio.xhtml" NAME="output5"
+    PATH="/inicio.xhtml" TARGET="rules:#inicio.xhtml" TITLE="inicio" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ingresoAlGimnasio.xhtml"
+  PATH="/ingresoAlGimnasio.xhtml" SHAPE="368,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ingresoAlGimnasio.xhtml:0" NAME="item"
+   PATH="/ingresoAlGimnasio.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="inicio::#inicio.xhtml" NAME="output"
+    PATH="/inicio.xhtml" TARGET="rules:#inicio.xhtml" TITLE="inicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistrarRutina::#RegistrarRutina1.xhtml"
+    NAME="output1" PATH="/RegistrarRutina1.xhtml"
+    TARGET="rules:#RegistrarRutina1.xhtml" TITLE="RegistrarRutina" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ingresoAlGimnasio::#ingresoAlGimnasio.xhtml"
+    NAME="output2" PATH="/ingresoAlGimnasio.xhtml"
+    TARGET="rules:#ingresoAlGimnasio.xhtml" TITLE="ingresoAlGimnasio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="RegistrarEjercicio::#RegistroEjercicio1.xhtml" NAME="output3"
+    PATH="/RegistroEjercicio1.xhtml"
+    TARGET="rules:#RegistroEjercicio1.xhtml" TITLE="RegistrarEjercicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistroUsuarios::#RegistroUsuarios1.xhtml"
+    NAME="output4" PATH="/RegistroUsuarios1.xhtml"
+    TARGET="rules:#RegistroUsuarios1.xhtml" TITLE="RegistroUsuarios" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="AcercaDe::#AcercaDe.xhtml" NAME="output5"
+    PATH="/AcercaDe.xhtml" TARGET="rules:#AcercaDe.xhtml"
+    TITLE="AcercaDe" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#RegistrarRutina1.xhtml"
+  PATH="/RegistrarRutina1.xhtml" SHAPE="640,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#RegistrarRutina1.xhtml:0" NAME="item"
+   PATH="/RegistrarRutina1.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="RegistrarRutina::#RegistrarRutina1.xhtml"
+    NAME="output" PATH="/RegistrarRutina1.xhtml"
+    TARGET="rules:#RegistrarRutina1.xhtml" TITLE="RegistrarRutina" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="inicio::#inicio.xhtml" NAME="output1"
+    PATH="/inicio.xhtml" TARGET="rules:#inicio.xhtml" TITLE="inicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ingresoAlGimnasio::#ingresoAlGimnasio.xhtml"
+    NAME="output2" PATH="/ingresoAlGimnasio.xhtml"
+    TARGET="rules:#ingresoAlGimnasio.xhtml" TITLE="ingresoAlGimnasio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="RegistrarEjercicio::#RegistroEjercicio1.xhtml" NAME="output3"
+    PATH="/RegistroEjercicio1.xhtml"
+    TARGET="rules:#RegistroEjercicio1.xhtml" TITLE="RegistrarEjercicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistroUsuarios::#RegistroUsuarios1.xhtml"
+    NAME="output4" PATH="/RegistroUsuarios1.xhtml"
+    TARGET="rules:#RegistroUsuarios1.xhtml" TITLE="RegistroUsuarios" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="AcercaDe::#AcercaDe.xhtml" NAME="output5"
+    PATH="/AcercaDe.xhtml" TARGET="rules:#AcercaDe.xhtml"
+    TITLE="AcercaDe" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#RegistroEjercicio1.xhtml"
+  PATH="/RegistroEjercicio1.xhtml" SHAPE="912,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#RegistroEjercicio1.xhtml:0" NAME="item"
+   PATH="/RegistroEjercicio1.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="inicio::#inicio.xhtml" NAME="output"
+    PATH="/inicio.xhtml" TARGET="rules:#inicio.xhtml" TITLE="inicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ingresoAlGimnasio::#ingresoAlGimnasio.xhtml"
+    NAME="output1" PATH="/ingresoAlGimnasio.xhtml"
+    TARGET="rules:#ingresoAlGimnasio.xhtml" TITLE="ingresoAlGimnasio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistrarRutina::#RegistrarRutina1.xhtml"
+    NAME="output2" PATH="/RegistrarRutina1.xhtml"
+    TARGET="rules:#RegistrarRutina1.xhtml" TITLE="RegistrarRutina" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="RegistrarEjercicio::#RegistroEjercicio1.xhtml" NAME="output3"
+    PATH="/RegistroEjercicio1.xhtml"
+    TARGET="rules:#RegistroEjercicio1.xhtml" TITLE="RegistrarEjercicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistroUsuarios::#RegistroUsuarios1.xhtml"
+    NAME="output4" PATH="/RegistroUsuarios1.xhtml"
+    TARGET="rules:#RegistroUsuarios1.xhtml" TITLE="RegistroUsuarios" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="AcercaDe::#AcercaDe.xhtml" NAME="output5"
+    PATH="/AcercaDe.xhtml" TARGET="rules:#AcercaDe.xhtml"
+    TITLE="AcercaDe" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#RegistroUsuarios1.xhtml"
+  PATH="/RegistroUsuarios1.xhtml" SHAPE="1184,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#RegistroUsuarios1.xhtml:0" NAME="item"
+   PATH="/RegistroUsuarios1.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="RegistroUsuarios::#RegistroUsuarios1.xhtml"
+    NAME="output" PATH="/RegistroUsuarios1.xhtml"
+    TARGET="rules:#RegistroUsuarios1.xhtml" TITLE="RegistroUsuarios" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="inicio::#inicio.xhtml" NAME="output1"
+    PATH="/inicio.xhtml" TARGET="rules:#inicio.xhtml" TITLE="inicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ingresoAlGimnasio::#ingresoAlGimnasio.xhtml"
+    NAME="output2" PATH="/ingresoAlGimnasio.xhtml"
+    TARGET="rules:#ingresoAlGimnasio.xhtml" TITLE="ingresoAlGimnasio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistrarRutina::#RegistrarRutina1.xhtml"
+    NAME="output3" PATH="/RegistrarRutina1.xhtml"
+    TARGET="rules:#RegistrarRutina1.xhtml" TITLE="RegistrarRutina" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="RegistrarEjercicio::#RegistroEjercicio1.xhtml" NAME="output4"
+    PATH="/RegistroEjercicio1.xhtml"
+    TARGET="rules:#RegistroEjercicio1.xhtml" TITLE="RegistrarEjercicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="AcercaDe::#AcercaDe.xhtml" NAME="output5"
+    PATH="/AcercaDe.xhtml" TARGET="rules:#AcercaDe.xhtml"
+    TITLE="AcercaDe" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#AcercaDe.xhtml" PATH="/AcercaDe.xhtml"
+  SHAPE="1456,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#AcercaDe.xhtml:0" NAME="item"
+   PATH="/AcercaDe.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="AcercaDe::#AcercaDe.xhtml" NAME="output"
+    PATH="/AcercaDe.xhtml" TARGET="rules:#AcercaDe.xhtml"
+    TITLE="AcercaDe" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="inicio::#inicio.xhtml" NAME="output1"
+    PATH="/inicio.xhtml" TARGET="rules:#inicio.xhtml" TITLE="inicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ingresoAlGimnasio::#ingresoAlGimnasio.xhtml"
+    NAME="output2" PATH="/ingresoAlGimnasio.xhtml"
+    TARGET="rules:#ingresoAlGimnasio.xhtml" TITLE="ingresoAlGimnasio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistrarRutina::#RegistrarRutina1.xhtml"
+    NAME="output3" PATH="/RegistrarRutina1.xhtml"
+    TARGET="rules:#RegistrarRutina1.xhtml" TITLE="RegistrarRutina" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="RegistrarEjercicio::#RegistroEjercicio1.xhtml" NAME="output4"
+    PATH="/RegistroEjercicio1.xhtml"
+    TARGET="rules:#RegistroEjercicio1.xhtml" TITLE="RegistrarEjercicio" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="RegistroUsuarios::#RegistroUsuarios1.xhtml"
+    NAME="output5" PATH="/RegistroUsuarios1.xhtml"
+    TARGET="rules:#RegistroUsuarios1.xhtml" TITLE="RegistroUsuarios" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<ui:composition
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      template="/templates/gestionUsuarios.xhtml"> 
+
+<ui:param name="tituloPagina" value="Registro Usuarios" />	
+<ui:param name="nombrePagina" value="Gestión de Usuarios - Registro" />	
+
+	<ui:param name="nombreInicio" value="Inicio" />
+	<ui:param name="nombreIngresoGimnasio" value="Ingreso al Gimnasio" />
+	<ui:param name="nombreRegistrarRutina" value="Agregar Rutina" />
+	<ui:param name="nombreRegistrarEjercicio" value="Agregar Ejercicio" />
+	<ui:param name="nombreRegistrarUsuario" value="Registrar Usuarios" />
+	<ui:param name="nombreAcercaDe" value="Acerca De" />
+	<ui:param name="nombreCerrarSesion" value="Cerrar Sesión" />
+
+<ui:define name="tabUsuarios">
+        
+	<h:form >
+		<div id="registrarUsuario" class="col l12">
+							<div class="col l12 s12 m12">
+								<div class="col l2 s2 m2"></div>
+								<div class="input-field col l4 s12">
+									<i class="fa fa-user prefix"
+										style="font-size: 27px; margin-top: 10px;"></i> <input
+										id="nombres" type="text" class="validate"
+										jsf:value="#{tablaBean.miusuario.nombre}" /> <label
+										for="nombres">Nombres</label>
+								</div>
+								<div class="input-field col l4 s12">
+									<i class="fa fa-user prefix"
+										style="font-size: 27px; margin-top: 10px;"></i> <input
+										id="apellidos" type="text" class="validate"
+										jsf:value="#{tablaBean.miusuario.apellido}" /> <label
+										for="apellidos">Apellidos</label>
+								</div>
+								<div class="col l2 s2 m2"></div>
+							</div>
+							<div class="col l12 s12 m12">
+								<div class="col l2 s2 m2"></div>
+								<div class="input-field col l4 s12">
+									<i class="fa fa-envelope prefix"
+										style="font-size: 27px; margin-top: 10px;"></i> <input
+										id="correoElectronico" type="email" class="validate"
+										jsf:value="#{tablaBean.miusuario.correo}" /> <label
+										for="correoElectronico">Correo Electronico</label>
+								</div>
+								<div class="input-field col l4 s12">
+									<i class="fa fa-phone-square prefix"
+										style="font-size: 27px; margin-top: 10px;"></i> <input
+										id="telefonoCelular" type="number" class="validate"
+										jsf:value="#{tablaBean.miusuario.telefono}" /> <label
+										for="telefonoCelular">Telefono Celular</label>
+								</div>
+								<div class="col l2 s2 m2"></div>
+							</div>
+
+							<div class="col l12 s12 m12">
+								<div class="col l2 s2 m2"></div>
+								<div class="input-field col l2 s12">
+									<i class="fa fa-sort-numeric-asc prefix"
+										style="font-size: 27px; margin-top: 10px;"></i> <input
+										id="ficha" type="number" class="validate"
+										jsf:value="#{tablaBean.miusuario.ficha}" /> <label
+										for="ficha">Ficha</label>
+								</div>
+								<div class="input-field col l3 s12">
+									<i class="fa fa-area-chart prefix"
+										style="font-size: 27px; margin-top: 10px;"></i> <input
+										id="programaDeFormacion" type="text" class="validate"
+										jsf:value="#{tablaBean.miusuario.formacion}" /> <label
+										for="porgramaDeFormacion">Programa de Formación</label>
+								</div>
+								<div class="col l4 s4 m4"></div>
+								<div class="input-field col l3 s12">
+									<i class="fa fa-sort-numeric-asc prefix"
+										style="font-size: 27px; margin-top: 10px;"></i> <input
+										id="numeroDeIdentificacion" type="number" class="validate"
+										jsf:value="#{tablaBean.miusuario.documento}" /> <label
+										for="numeroDeIdentificacion">N° De Identificación</label>
+								</div>
+								<div class="col s4 m4"></div>
+							</div>
+
+							<div class="col l6 s12">
+								<div class="col l4 s1"></div>
+								<div class="col l4 s4 m4">
+									<span class="textoGenero">Genero</span>
+								</div>
+								<div class="col l4 s4 m4"></div>
+								<div class="col l12 s12 m12">
+									<div clasS="col l4"></div>
+									<div class="col l1">
+										<h:selectOneRadio value="#{tablaBean.miusuario.sexo}">
+											<f:selectItem itemValue="Masculino" itemLabel="Masculino" />
+
+											<f:selectItem itemValue="Femenino" itemLabel="Femenino" />
+										</h:selectOneRadio>
+									</div>
+								</div>
+							</div>
+
+							<div class="col l6 s12">
+								<div class="col l4 s1"></div>
+								<div class="col l4 s4 m4">
+									<span class="textoGenero">Nivel</span>
+								</div>
+								<div class="col l4 s4 m4"></div>
+								<div class="col l12 s12 m12">
+									<div clasS="col l1"></div>
+									<div class="col l1">
+										<h:selectOneRadio value="#{tablaBean.miusuario.sexo}">
+											<f:selectItem itemValue="Basica" itemLabel="Basica" />
+											<f:selectItem itemValue="Media" itemLabel="Media" />
+											<f:selectItem itemValue="Avanzada" itemLabel="Avanzada" />
+										</h:selectOneRadio>
+									</div>
+								</div>
+							</div>
+
+							<div style="text-align: center;">
+								<a class="waves-light btn green"
+									jsf:action="#{tablaBean.agregarPersona()}">Registrar
+									Usuario</a>
+							</div>
+						</div>              
+
+            </h:form> 
+
+	</ui:define>
+
+
+</ui:composition>

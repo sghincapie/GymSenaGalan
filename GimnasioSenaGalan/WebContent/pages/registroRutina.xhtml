@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html 
+xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	
+<ui:composition 
+    xmlns:p="http://primefaces.org/ui"
+	template="/templates/gestionDeRutina.xhtml">
+
+	<ui:param name="tituloPagina" value="Registro Rutina" />
+	<ui:param name="nombrePagina" value="Gestión de Rutina - Registro" />
+
+	<ui:param name="nombreInicio" value="Inicio" />
+	<ui:param name="nombreIngresoGimnasio" value="Ingreso al Gimnasio" />
+	<ui:param name="nombreRegistrarRutina" value="Agregar Rutina" />
+	<ui:param name="nombreRegistrarEjercicio" value="Agregar Ejercicio" />
+	<ui:param name="nombreRegistrarUsuario" value="Registrar Usuarios" />
+	<ui:param name="nombreAcercaDe" value="Acerca De" />
+	<ui:param name="nombreCerrarSesion" value="Cerrar Sesión" />
+
+	<ui:define name="tabRutina">
+
+		<h:form>
+			<div id="registrarRutina" class="col l12 s12 m12">
+				<div class="col l2 s2 m2"></div>
+				<div class="col l8 s8 m8 green"
+					style="text-align: center; margin-bottom: 20px;">
+					<h5 style="color: #FFF;">Registrar Rutina</h5>
+				</div>
+				<div class="col l2 s2 m2"></div>
+
+				<div class="col l12 s12 m12" style="margin-bottom: 20px;">
+					<div class="col l4 s12">
+						<div class="input-field col l12 s12">
+							<i class="fa fa-sort-alpha-asc prefix"
+								style="font-size: 27px; margin-top: 10px;"></i> <input
+								id="last_name" type="text" class="validate"
+								jsf:value="#{rutinaBean.mirutina.id}" /> <label for="last_name">Id
+								de la Rutina</label>
+						</div>
+					</div>
+					<div class="col l4 s12">
+						<div class="input-field col l12 s12">
+							<i class="fa fa-sort-alpha-asc prefix"
+								style="font-size: 27px; margin-top: 10px;"></i> <input
+								id="last_name" type="text" class="validate"
+								jsf:value="#{rutinaBean.mirutina.nombre}" /><label
+								for="last_name">Nombre de la Rutina</label>
+						</div>
+					</div>
+					<div class="col l4 s12">
+						<div class="col l6 s12">
+							<div class="col l4 s1"></div>
+							<div class="col l4 s4 m4">
+								<span class="textoGenero">Nivel</span>
+							</div>
+							<div class="col l4 s4 m4"></div>
+							<div class="col l12 s12 m12">
+								<div clasS="col l1"></div>
+								<div class="col l1">
+									<h:panelGrid columns="3">
+										<h:commandButton id="Buton1"
+											action="#{rutinaBean.TodoslosEjercicios()}" value="Basica">
+											<f:param name="nivel" value="basico" />
+											<f:ajax execute="Buton1"
+												listener="#{rutinaBean.TodoslosEjercicios()}"
+												render="Ejercicios1" />
+										</h:commandButton>
+
+										<h:commandButton id="Buton2"
+											action="#{rutinaBean.TodoslosEjercicios()}" value="Media">
+											<f:param name="nivel" value="media" />
+											<f:ajax execute="Buton2"
+												listener="#{rutinaBean.TodoslosEjercicios()}"
+												render="Ejercicios1" />
+										</h:commandButton>
+
+										<h:commandButton id="Buton3"
+											action="#{rutinaBean.TodoslosEjercicios()}" value="Avanzada">
+											<f:param name="nivel" value="avanzado" />
+											<f:ajax execute="Buton3"
+												listener="#{rutinaBean.TodoslosEjercicios()}"
+												render="Ejercicios1" />
+										</h:commandButton>
+									</h:panelGrid>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col l2 s2 m2"></div>
+				</div>
+
+				<div id="registrarRutina" class="col l12 s12 m12">
+					<div class="col l2 s2 m2"></div>
+					<div class="col l8 s8 m8 green"
+						style="text-align: center; margin-bottom: 20px;">
+						<h5 style="color: #FFF;">Ejercicios</h5>
+					</div>
+					<div class="col l2 s2 m2"></div>
+					<div class="Ejercicios">
+						<h:dataTable id="Ejercicios1" value="#{rutinaBean.listaEjercicio}"
+							var="datos" border="1" style="width: 100%;"
+							class="table table-hover text-center striped"
+							>
+							<h:column>
+								<f:facet name="header">
+									<h:outputLabel value="Codigo Ejercicio" />
+								</f:facet>
+
+								<h:outputLabel value="#{datos.idEjercicio}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">
+									<h:outputLabel value="Tipo de Ejercicio" />
+								</f:facet>
+
+								<h:outputLabel value="#{datos.tipoEjercicio}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">
+									<h:outputLabel value="Nivel" />
+								</f:facet>
+
+								<h:outputLabel value="#{datos.nivel}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">
+									<h:outputLabel value="Nombre" />
+								</f:facet>
+
+								<h:outputLabel value="#{datos.nombre}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">
+									<h:outputLabel value="Series" />
+								</f:facet>
+
+								<h:outputLabel value="#{datos.series}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">
+									<h:outputLabel value="Repeticiones" />
+								</f:facet>
+
+								<h:outputLabel value="#{datos.repeticiones}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">
+									<h:outputLabel value="Descripción" />
+								</f:facet>
+
+								<h:outputLabel value="#{datos.descripcion}" />
+							</h:column>
+							<!--  <h:column>
+								<f:facet name="header">
+									<h:outputLabel value="Asociar a la Rutina" />
+								</f:facet>
+								<div class="col l12">
+
+
+							
+								<p:selectManyCheckbox rendered="#{not rutinaBean.asociar}">
+										<f:selectItem  id="ite1"
+											itemLabel="Asociar">
+											<f:param name="id" value="#{datos.idEjercicio}" />
+											<f:ajax execute="ite1" event="rowUnSelectyy"
+												listener="#{rutinaBean.LlenaArreglo(datos.idEjercicio)}"
+												render="Ejercicios1" ></f:ajax>
+										</f:selectItem >	
+									</p:selectManyCheckbox>	
+									<p:selectManyCheckbox rendered="#{rutinaBean.asociar}">
+										<f:selectItem  id="ite2"
+											itemLabel="desasociar" >
+											<f:param name="id" value="#{datos.idEjercicio}" />
+											<f:ajax execute="ite2" event="click"
+												listener="#{rutinaBean.quitarId(datos.idEjercicio)}"
+												render="Ejercicios1" ></f:ajax>
+										</f:selectItem>
+								</p:selectManyCheckbox>
+
+								</div>
+							</h:column>-->
+						</h:dataTable>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col l2 s1 m1"></div>
+					<div class="col l8 s10 m10"></div>
+					<div class="col l2 s1 m1"></div>
+				</div>
+				<div style="text-align: center;">
+					<h:commandButton action="#{rutinaBean.RegistrarRutina()}"
+						class="waves-light btn green" value="Registrar Rutina" />
+				</div>
+			</div>
+		</h:form>
+
+	</ui:define>
+
+
+</ui:composition>
+</html>

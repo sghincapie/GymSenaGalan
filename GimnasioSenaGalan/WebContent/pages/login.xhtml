@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<h:head>
+	<meta charset="UTF-8"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+	<link rel="shortcut icon" href="../resources/img1/favicon-16x16.png"
+		type="image/x-icon" />
+
+	<link rel="stylesheet" href="../resources/css/materialize.css"></link>
+	<link rel="stylesheet" href="../resources/css/estilosIniciarSesion.css"></link>
+	<link rel="stylesheet" href="../resources/css/main.css"></link>
+	<link rel="stylesheet" href="../resources/css/util.css"></link>
+	<link rel="stylesheet" href="../resources/css/font-awesome.css" />
+	<title>Iniciar Sesión</title>
+
+	<script type="text/javascript">
+function ConfirmLogin() {
+	
+
+alert("Los Datos Que Suministro Son Incorrectos");
+}
+</script>
+</h:head>
+
+
+<body>
+	<nav>
+		<h:form>
+			<div class="nav-wrapper green">
+				<a href="../index.xhtml" class="brand-logo left">GimSena</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+
+					<li><h:commandLink>
+							<a href="../index.jsf" class="fa fa-home"> Inicio</a>
+						</h:commandLink></li>
+
+				</ul>
+
+			</div>
+		</h:form>
+	</nav>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+				<h:form class="login100-form">
+					<div class="login100-form-title p-b-33">Iniciar Sesión</div>
+
+					<div class="wrap-input">
+						<input jsf:id="txtUsuario" type="text" placeholder="Usuario"
+							jsf:value="#{administradorBean.miAdmin.documento}" />
+					</div>
+					<br></br>
+					<div class="wrap-input">
+						<input jsf:id="txtContraseña" type="password"
+							placeholder="Contraseña"
+							jsf:value="#{administradorBean.miAdmin.contraseña}" />
+					</div>
+					<div class="container-login100-form-btn m-t-20">
+
+						<button jsf:id="button" class="login100-form-btn green"
+							jsf:actionListener="#{administradorBean.validarUsuario()}"
+							jsf:action="#{administradorBean.laotrapagina()}">Iniciar
+							Sesion</button>
+
+
+					</div>
+
+					<div class="form-group col-md-12">
+						<a href="#" class="heOlvidadoPass">He olvidado mi Contraseña</a>
+					</div>
+					<br />
+					<div class="col l12 center">
+						<h:outputLabel class="red"
+							rendered="#{administradorBean.muestrainfo==true}"
+							value="#{administradorBean.laotrapagina()}" />
+					</div>
+				</h:form>
+			</div>
+		</div>
+
+		<div class="form-group col-md-12">
+			<h1>#{AdministradorBean.msLG}</h1>
+		</div>
+	</div>
+
+
+
+	<footer class="page-footer green">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s6 m6">
+					<h5 class="white-text">Gimnasion Sena</h5>
+					<p class="grey-text text-lighten-4">Realizar una propuesta para
+						el mejoramiento del gimnasio del Sena Galán e implementar un
+						sistema para que los aprendices e instructores tengan más
+						facilidad o acceso al gimnasio con un orden respectivo, y así
+						disminuir el tiempo de espera de los aprendices y de los
+						instructores encargados, y lograr una solución a este problema.</p>
+				</div>
+				<div class="col l4 offset-l2 s6 m6">
+					<h5 class="white-text">CONTÁCTANOS</h5>
+					<ul>
+						<li><a class="fa fa-envelope grey-text text-lighten-3"
+							href="#!"> cagerrero4@misena.edu.co</a></li>
+						<li><a class="fa fa-phone-square grey-text text-lighten-3"
+							href="#!"> +57 (6) 7461417 IP 62664</a></li>
+						<li><a
+							class="fa fa-facebook-official grey-text text-lighten-3"
+							href="#!"> SENAComunica</a></li>
+						<li><a class="fa fa-twitter-square grey-text text-lighten-3"
+							href="#!"> @SENAComunica</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2018 CopyDerechosReservados <a
+					class="grey-text text-lighten-4 right" href="#!">Sena Centro de
+					Comercio Turismo</a>
+			</div>
+		</div>
+	</footer>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="../resources/js/jquery.js"></script>
+	<script type="text/javascript" src="../resources/js/materialize.min.js"></script>
+
+
+</body>
+</html>

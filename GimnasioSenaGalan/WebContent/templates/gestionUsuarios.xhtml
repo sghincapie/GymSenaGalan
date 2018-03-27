@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="/templates/plantilla.xhtml">
+
+
+	<ui:define name="contenido">
+
+		<div class="card-panel ">
+
+			<div class="row">
+				<div class="col l12">
+					<div class="col s6 m9">
+						<p>
+							En este espacio podrás realizar toda la gestión de los <b>Usuarios</b>
+							tales como el registro, consulta, actualización, activación e
+							inactivación.
+						</p>
+					</div>
+
+				</div>
+				<div class="row center">
+					<div class="col l12">
+						<div class="col l3 s4 m4 ">
+							<a class="waves-effect waves-light btn green"
+								href="../pages/registroUsuarios.jsf" style="width: 100%"
+								>Registrar
+								Usuarios</a>
+						</div>
+						<div class="col l3 s4 m4 ">
+							<a class="waves-effect waves-light btn green"
+								href="../pages/listaUsuarios.jsf" style="width: 100%"
+								onclick="#{tablaBean.cargarPersonas2()}">Consultar
+								Usuarios</a>
+						</div>
+						<div class="col l3 s4 m4 ">
+							<a class="waves-effect waves-light btn green"
+								href="../pages/medidasUsuarios.jsf" style="width: 100%">Medidas
+								De Usuarios</a>
+						</div>
+						<div class="col l3 s4 m4 ">
+							<a class="waves-effect waves-light btn green"
+								href="../pages/usuariosInactivos.jsf" style="width: 100%"
+								onclick="#{tablaBean.cargarPersonas3()}">UsuariosInactivos</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m12 ">
+						<ui:insert name="tabUsuarios" />
+						
+						
+					</div>
+				</div>
+
+
+
+
+
+
+			</div>
+		</div>
+	</ui:define>
+
+
+</ui:composition>

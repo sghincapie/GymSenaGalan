@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<h:head>
+	<!-- Creación de variable para nuestro titulo de nuestra página web -->
+	<title>#{tituloPagina}</title>
+	<link rel="shortcut icon" href="../resources/img1/favicon-16x16.png"
+		type="image/x-icon" />
+
+	<!-- Vinculación del Framework Materialize -->
+	<link rel="stylesheet" href="../resources/css/materialize.min.css" />
+
+	<!-- Vinculacion del estilo propio de la plantilla -->
+	<link rel="stylesheet" href="../resources/css/estilosPlantilla.css" />
+
+	<!-- Vinculación de la hoja de estilo de los iconos FontAwesome -->
+	<link rel="stylesheet" href="../resources/css/font-awesome.css" />
+
+	<meta name="viewport" content="width-device-width, initial-scale=1.0" />
+</h:head>
+<body>
+
+	<!-- Creación de la barra de navegación -->
+
+
+	<nav>
+		<div class="nav-wrapper green">
+			<a href="../pages/inicio.jsf" class="brand-logo">GymSena</a> <a href="#"
+				data-activates="mobile-demo" class="button-collapse"><i
+				class="fa fa-bars"></i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="../pages/inicio.jsf" class="fa fa-home">
+						#{nombreInicio}</a></li>
+				<li><a href="../pages/ingresoAlGimnasio.jsf"
+					class="fa fa-sign-in"> #{nombreIngresoGimnasio}</a></li>
+				<li><a href="../pages/registroRutina.jsf"
+					class="fa fa-plus-circle"> #{nombreRegistrarRutina}</a></li>
+				<li><a href="../pages/registroEjercicios.jsf"
+					class="fa fa-plus-circle"> #{nombreRegistrarEjercicio}</a></li>
+				<li><a href="../pages/registroUsuarios.jsf" class="fa fa-users">
+						#{nombreRegistrarUsuario}</a></li>
+				<li><a href="../pages/acercaDelTeam.jsf"
+					class="fa fa-info-circle"> #{nombreAcercaDe}</a></li>
+				<li><h:form>
+						<h:commandLink action="#{administradorBean.CerrarSesion()}"
+							class="fa fa-times-circle"> #{nombreCerrarSesion}</h:commandLink>
+					</h:form></li>
+			</ul>
+			<ul class="side-nav" id="mobile-demo">
+				<li><a href="../pages/inicio.jsf" class="fa fa-home">
+						#{nombreInicio}</a></li>
+				<li><a href="../pages/ingresoAlGimnasio.jsf"
+					class="fa fa-sign-in"> #{nombreIngresoGimnasio}</a></li>
+				<li><a href="../pages/RegistrarRutina1.jsf"
+					class="fa fa-plus-circle"> #{nombreRegistrarRutina}</a></li>
+				<li><a href="../pages/registroEjercicios.jsf"
+					class="fa fa-plus-circle"> #{nombreRegistrarEjercicio}</a></li>
+				<li><a href="../pages/registroUsuarios.jsf" class="fa fa-users">
+						#{nombreRegistrarUsuario}</a></li>
+				<li><a href="../pages/acercaDelTeam.jsf"
+					class="fa fa-info-circle"> #{nombreAcercaDe}</a></li>
+				<li><a href="#" class="fa fa-times-circle">
+						#{nombreCerrarSesion}</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+
+	<!-- Creación del contenido de nuestra App -->
+	<ui:insert name="contenido" />
+
+	<!-- Creacion de pie de pagina -->
+	<ui:insert name="pieDePagina">
+
+		<!-- Vinculación del footeer a nuestra pagina web. -->
+		<footer class="page-footer green">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s6 m6">
+						<h5 class="white-text">Gimnasion Sena</h5>
+						<p class="grey-text text-lighten-4">Realizar una propuesta
+							para el mejoramiento del gimnasio del Sena Galán e implementar un
+							sistema para que los aprendices e instructores tengan más
+							facilidad o acceso al gimnasio con un orden respectivo, y así
+							disminuir el tiempo de espera de los aprendices y de los
+							instructores encargados, y lograr una solución a este problema.</p>
+					</div>
+					<div class="col l4 offset-l2 s6 m6">
+						<h5 class="white-text">CONTÁCTANOS</h5>
+						<ul>
+							<li><a class="fa fa-envelope grey-text text-lighten-3"
+								href="#!"> cagerrero4@misena.edu.co</a></li>
+							<li><a class="fa fa-phone-square grey-text text-lighten-3"
+								href="#!"> +57 (6) 7461417 IP 62664</a></li>
+							<li><a
+								class="fa fa-facebook-official grey-text text-lighten-3"
+								href="#!"> SENAComunica</a></li>
+							<li><a class="fa fa-twitter-square grey-text text-lighten-3"
+								href="#!"> @SENAComunica</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+					© 2018 CopyDerechosReservados <a
+						class="grey-text text-lighten-4 right" href="#!">Sena Centro
+						de Comercio Turismo</a>
+				</div>
+			</div>
+		</footer>
+	</ui:insert>
+
+	<!-- Inicialización del JQuery, para la cuando sea Responsive se pueda acomodar un menu -->
+	<script>
+   		$(".button-collapse").sideNav();
+	</script>
+
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="../resources/js/jquery.js"></script>
+	<script type="text/javascript" src="../resources/js/materialize.min.js"></script>
+</body>
+</html>

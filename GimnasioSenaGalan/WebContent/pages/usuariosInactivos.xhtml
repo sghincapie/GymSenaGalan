@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<ui:composition
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      template="/templates/gestionUsuarios.xhtml"> 
+
+<ui:param name="tituloPagina" value="Usuarios Inactivos" />	
+<ui:param name="nombrePagina" value="Gestión de Usuarios - Usuarios Inactivos" />	
+<head>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+
+<link rel="shortcut icon" href="../resources/img1/favicon-16x16.png"
+	type="image/x-icon" />
+
+<!--Viculación del Framework Materialize-->
+<link type="text/css" rel="stylesheet"
+	href="../resources/css/materialize.min.css" media="screen,projection" />
+
+<!-- Vinculación de la hoja de estilo de nuestra pagina -->
+<link rel="stylesheet" href="resources/css/estilosRegistrarRutina.css" />
+
+<!-- Vinculación de la hoja de estilo de los iconos FontAwesome -->
+<link rel="stylesheet" href="../resources/css/font-awesome.css" />
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+</head>
+
+	<ui:param name="nombreInicio" value="Inicio" />
+	<ui:param name="nombreIngresoGimnasio" value="Ingreso al Gimnasio" />
+	<ui:param name="nombreRegistrarRutina" value="Agregar Rutina" />
+	<ui:param name="nombreRegistrarEjercicio" value="Agregar Ejercicio" />
+	<ui:param name="nombreRegistrarUsuario" value="Registrar Usuarios" />
+	<ui:param name="nombreAcercaDe" value="Acerca De" />
+	<ui:param name="nombreCerrarSesion" value="Cerrar Sesión" />
+
+<ui:define name="tabUsuarios">
+        
+	<h:form >
+		<div id="usuariosInactivos" class="col s12">
+
+						<div id="listaUsuarios" class="col s12">
+							<div class="col l1"></div>
+							<div class="col l10">
+								<div class="tab-pane fade" id="list">
+									<div class="table-responsive">
+										<div class="row">
+											<div class="col l1"></div>
+											<div class="col l10 colorUsuarios">
+												<h:dataTable value="#{tablaBean.listaPersona3}" var="datos"
+													border="1" style="width: 100%;"
+													class="table table-hover text-center striped">
+													<h:column>
+														<f:facet name="header">
+															<h:outputLabel value="Imagen" />
+														</f:facet>
+														<h:graphicImage value="#{datos.imagen}" />
+													</h:column>
+													<h:column>
+														<f:facet name="header">
+															<h:outputLabel value="Documento" />
+														</f:facet>
+														<h:outputLabel value="#{datos.documento}" />
+													</h:column>
+													<h:column>
+														<f:facet name="header">
+															<h:outputLabel value="Nombre" />
+														</f:facet>
+														<h:outputLabel value="#{datos.nombre}" />
+													</h:column>
+													<h:column>
+														<f:facet name="header">
+															<h:outputLabel value="Apellido" />
+														</f:facet>
+														<h:outputLabel value="#{datos.apellido}" />
+													</h:column>
+													<h:column>
+														<f:facet name="header">
+															<h:outputLabel value="Ficha" />
+														</f:facet>
+														<h:outputLabel value="#{datos.ficha}" />
+													</h:column>
+													<h:column>
+														<f:facet name="header">
+															<h:outputLabel value="Formacion" />
+														</f:facet>
+														<h:outputLabel value="#{datos.formacion}" />
+													</h:column>
+													<h:column>
+														<f:facet name="header">
+															<h:outputLabel value="Telefono" />
+														</f:facet>
+														<h:outputLabel value="#{datos.telefono}" />
+													</h:column>
+													<h:column>
+														<f:facet name="header">
+															<h:outputLabel value="Acciones" />
+														</f:facet>
+														<h:commandButton action="#{tablaBean.ActivarPersona(datos)}" value="Activar"
+															class="fas fa-times-circle" />
+														<br />
+													</h:column>
+												</h:dataTable>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+            </h:form> 
+            
+<!--Import jQuery before materialize.js-->
+			<script type="text/javascript" src="../resources/js/jquery.js"></script>
+			<script type="text/javascript" src="../resources/js/materialize.min.js"></script>
+			
+			<script>
+				      $(document).ready(function(){
+				    	    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+				    	    $('.modal').modal();
+				    	  });
+					</script>
+
+	</ui:define>
+
+
+</ui:composition>

@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.logoSena{
+    height: 55px;
+    width: 18%;
+}
+
+.iniciarSesion{
+    background-color: #b2dfdb;
+}
+
+.heOlvidadoPass{
+    color: blue;
+    text-decoration: underline;
+}
+
+.heOlvidadoPass:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.login{
+	height: 400%;
+}

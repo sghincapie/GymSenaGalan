@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<ui:composition lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/plantilla.xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+	<head>
+<link rel="shortcut icon" href="../resources/img1/favicon-16x16.png"
+	type="image/x-icon" />
+
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet"
+	href="../resources/css/materialize.min.css" media="screen,projection" />
+<link rel="stylesheet" href="resources/css/estilosIngresoGimnasio.css" />
+
+<!-- Vinculación de la hoja de estilo de los iconos FontAwesome -->
+<link rel="stylesheet" href="../resources/css/font-awesome.css" />
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<ui:param name="tituloPagina" value="Ingreso Al Gimnasio" />
+	<body>
+
+		<!-- Creacion de la Barra de Navegacion -->
+		<ui:param name="nombreInicio" value="Inicio" />
+		<ui:param name="nombreIngresoGimnasio" value="Ingreso al Gimnasio" />
+		<ui:param name="nombreRegistrarRutina" value="Agregar Rutina" />
+		<ui:param name="nombreRegistrarEjercicio" value="Agregar Ejercicio" />
+		<ui:param name="nombreRegistrarUsuario" value="Registrar Usuarios" />
+		<ui:param name="nombreAcercaDe" value="Acerca De" />
+		<ui:param name="nombreCerrarSesion" value="Cerrar Sesión" />
+
+		<ui:define name="contenido">
+
+			<div class="row">
+
+				<!-- Creamos 3 columnas para que en si nos quede el registro en la mitad 
+			como se puede visualizar en la web -->
+				<div class="col l3 m2 s1"></div>
+
+				<!-- Creamos 6 columnas para tener alli nuestro registro -->
+				<div class="col l6 m8 s10">
+					<div class="card">
+						<div class="card-content">
+							<div class="row">
+								<div class="col l12 m12 s12">
+									<h:form>
+										<h3 style="text-align: center;">Ingresar Usuarios</h3>
+										<div class="input-field col l12 m12 s12">
+											<input id="usuario" type="text" class="validate"
+												jsf:value="#{tablaBean.miusuario2.documento}" /> <label
+												for="usuario">Documento</label>
+										</div>
+										<div class="col l12 m12 s12">
+											<button class="btn-large col l12 m12 s12 green"
+												jsf:value="#{tablaBean.agregarRegistro()}">Ingresar
+												Usuarios</button>
+										</div>
+										<div class="col l12 m12 s12">
+											<br></br>
+											<a class="btn-large col l12 m12 s12 green"
+											href="ingresoAlGimnasioReportesPorDia.jsf">Reportes</a>
+										</div>
+									</h:form>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col l3 m2 s1"></div>
+			</div>
+			<h5>#{tablaBean.msjBD2}</h5>
+			<div class="row">
+				<div class="col l2 s1 m1"></div>
+				<div class="col l8 s10 m10">
+					<h:dataTable value="#{tablaBean.listaPersona}" var="datos"
+						border="1" style="width: 100%;"
+						class="table table-hover text-center striped"
+						rendered="#{tablaBean.listaPersona.size()>0}">
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Numero De Ingreso" />
+							</f:facet>
+							<h:outputLabel value="#{datos.idingreso}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Documento" />
+							</f:facet>
+							<h:outputLabel value="#{datos.documento}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Nombre" />
+							</f:facet>
+							<h:outputLabel value="#{datos.nombre}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Apellido" />
+							</f:facet>
+							<h:outputLabel value="#{datos.apellido}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Ficha" />
+							</f:facet>
+							<h:outputLabel value="#{datos.ficha}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Formacion" />
+							</f:facet>
+							<h:outputLabel value="#{datos.formacion}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Telefono" />
+							</f:facet>
+							<h:outputLabel value="#{datos.telefono}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Fecha y Hora" />
+							</f:facet>
+							<h:outputLabel value="#{datos.horaIngreso}" />
+						</h:column>
+					</h:dataTable>
+				</div>
+				<div class="col l2 s1 m1"></div>
+			</div>
+
+			<!--Import jQuery before materialize.js-->
+			<script type="text/javascript" src="../resources/js/jquery.js"></script>
+			<script type="text/javascript"
+				src="../resources/js/materialize.min.js"></script>
+		</ui:define>
+
+	</body>
+</ui:composition>

@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.formularioEnCentro{
+	text-align: center;
+}
+
+img{
+	cursor: pointer;
+}

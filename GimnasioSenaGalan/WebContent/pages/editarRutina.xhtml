@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="/templates/gestionDeRutina.xhtml">
+
+	<ui:param name="tituloPagina" value="Editar Rutina" />
+	<ui:param name="nombrePagina" value="Gestión de Rutina - Editar" />
+
+	<ui:param name="nombreInicio" value="Inicio" />
+	<ui:param name="nombreIngresoGimnasio" value="Ingreso al Gimnasio" />
+	<ui:param name="nombreRegistrarRutina" value="Agregar Rutina" />
+	<ui:param name="nombreRegistrarEjercicio" value="Agregar Ejercicio" />
+	<ui:param name="nombreRegistrarUsuario" value="Registrar Usuarios" />
+	<ui:param name="nombreAcercaDe" value="Acerca De" />
+	<ui:param name="nombreCerrarSesion" value="Cerrar Sesión" />
+
+	<ui:define name="tabRutina">
+
+		<h:form>
+			<div class="card-action" id="contenido">
+
+
+
+				<div>
+					<div>
+						<h4 class="textoCentradoEnModales collection-header">Datos
+							De la Rutina #{Rutina.nombre} Nivel #{Rutina.tipo}</h4>
+						<br />
+						<div class="col l12">
+							<div class="card">
+								<div class="card-content">
+									<div class="row">
+										<div class="col l12">
+											<div class="input-field col l6">
+												<h:outputLabel value="ID Rutina" />
+												<h:inputText disabled="true" id="IDEjercicio" required="true" type="text"
+													class="validate" value="#{Rutina.id}" />
+											</div>
+											<div class="input-field col l6">
+												<h:outputLabel value="nivel de la Rutina" />
+												<h:inputText id="TipodeEjercicio" required="true"
+													type="text" class="validate"
+													value="#{Rutina.tipo}" />
+											</div>
+										</div>
+										<div class="col 12">
+											<div class="input-field col l6">
+												<h:outputLabel value="Nombre" />
+												<h:inputText id="Nivel" required="true" type="text"
+													class="validate" value="#{Rutina.nombre}" />
+											</div>
+											<div class="input-field col l3">
+												<h:outputLabel value="Nombre del Ejercicio" />
+
+												<h:inputText id="NombredelEjercicio" required="true"
+													type="text" class="validate" value="#{Ejercicio.nombre}" />
+											</div>
+											<div class="input-field col l3">
+												<h:outputLabel value="Series" />
+												<h:inputText id="Series" required="true" type="number"
+													class="validate" value="#{Ejercicio.series}" />
+											</div>
+										</div>
+
+										<div class="col l12">
+											<div class="input-field col l5">
+												<h:outputLabel value="Repeticiones" />
+												<h:inputText id="repeticiones" required="true" type="text"
+													class="validate" value="#{Ejercicio.repeticiones}" />
+											</div>
+											<div class="input-field col l4">
+												<h:outputLabel value="Descripcion" />
+
+												<h:inputText id="descripcion" type="text" required="true"
+													class="validate" value="#{Ejercicio.descripcion}" />
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+					</div>
+						<div class="col l12 s12 m12" style="font-size: 20px;">
+
+							<div class="col l1">
+								<h:commandLink
+									action="#{ejercicioBean.guardarEjercicio(Ejercicio)}"
+									value="Guardar" />
+								<br />
+							</div>
+							<div class="col l1 ">
+								<h:commandLink action="listaEjercicio.jsf" value="Cancelar" />
+
+							</div>
+
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+
+
+		</h:form>
+
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="../resources/js/jquery.js"></script>
+		<script type="text/javascript"
+			src="../resources/js/materialize.min.js"></script>
+
+
+	</ui:define>
+
+
+</ui:composition>
